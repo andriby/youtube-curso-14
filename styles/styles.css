@@ -14,14 +14,79 @@ body{
 }
 
 #aside{
-    padding-top: 5rem;
-    display: block;
+    display: none;
+    float: left;
+    position: fixed;
+    height: 100vh;
+    /* border-right: 1px solid #8a8a8a63; */
+    padding-right: 0;
 }
+
+/* ASIDE CLOSED */
+
+.aside-closed{
+
+}
+
+.aside-closed ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    gap: 5px;
+    padding: 4.5rem .75rem 0 1.5rem;
+    max-width: 5.5rem;
+    list-style: none;
+}
+
+
+.aside-closed li{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 5rem;
+}
+
+@media only screen and (min-width:1092px){
+    .aside-closed ul{
+        padding-right: .5rem;
+    }
+}
+
+.aside-closed li:hover{
+    background-color: #474747c3;
+    cursor: pointer;
+}
+
+.aside-closed li div{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ASIDE OPEN */
+
 
 .aside-open ul li{
     display: flex;
     align-items: center;
     justify-content: start;
+}
+
+@media only screen and (min-width:802px){
+    #aside{
+        display: block;
+    }
+    .aside-open{
+        display: none;
+    }
 }
 
 /* NAVBAR */
@@ -38,6 +103,12 @@ nav{
     left: 0; 
     z-index: 9;
     width: 100%;
+}
+
+@media only screen and (min-width:1092px){
+    nav{
+        padding: .75rem 2rem;
+    }
 }
 
 .navbar-left, .navbar-right{
@@ -218,6 +289,13 @@ section.slider{
 main{
     padding: 2rem;
     padding-top: 2.5rem;
+}
+
+@media only screen and (min-width:802px){
+    main{
+        width: 93vw;
+        float: right;
+    }
 }
 
 section.videos{
