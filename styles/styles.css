@@ -13,20 +13,25 @@ body{
     font-family: 'Roboto', Arial, sans-serif;
 }
 
-#aside{
+.contenido{
+    display: flex;
+    justify-content: space-between;
+}
+
+aside{
     display: none;
-    float: left;
-    position: fixed;
-    height: 100vh;
+    height: 100%;
     /* border-right: 1px solid #8a8a8a63; */
     padding-right: 0;
 }
 
-/* ASIDE CLOSED */
-
-.aside-closed{
-
+@media only screen and(min-width:1314px){
+    aside{
+        width: 15rem;
+    }
 }
+
+/* ASIDE CLOSED */
 
 .aside-closed ul{
     display: flex;
@@ -34,7 +39,7 @@ body{
     justify-content: start;
     align-items: stretch;
     gap: 5px;
-    padding: 4.5rem .75rem 0 1.5rem;
+    padding: 0 .75rem 0 1rem;
     max-width: 5.5rem;
     list-style: none;
 }
@@ -58,6 +63,12 @@ body{
     }
 }
 
+@media only screen and (min-width: 1314px){
+    .aside-closed{
+        display: none;
+    }
+}
+
 .aside-closed li:hover{
     background-color: #474747c3;
     cursor: pointer;
@@ -73,6 +84,26 @@ body{
 
 /* ASIDE OPEN */
 
+.aside-open{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: fixed;     
+    width: 20rem;   
+    z-index: 999;
+}
+
+.aside-open ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    gap: 5px;
+    padding: 0 .75rem 0 1rem;
+    max-width: 5.5rem;
+    list-style: none;
+
+}
 
 .aside-open ul li{
     display: flex;
@@ -81,11 +112,17 @@ body{
 }
 
 @media only screen and (min-width:802px){
-    #aside{
+    aside{
         display: block;
     }
     .aside-open{
         display: none;
+    }
+}
+
+@media only screen and (min-width: 1314px){
+    .aside-open{
+        display: flex;
     }
 }
 
@@ -266,7 +303,6 @@ section.slider{
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: .95rem;
 }
 
@@ -287,14 +323,14 @@ section.slider{
 /* PRINCIAPL */
 
 main{
+    width: 100%;
     padding: 2rem;
     padding-top: 2.5rem;
 }
 
-@media only screen and (min-width:802px){
+@media only screen and (min-width:1314px){
     main{
-        width: 93vw;
-        float: right;
+        padding-left: 22.5rem;
     }
 }
 
