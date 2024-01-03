@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 /*font-family: 'Roboto', Arial, sans-serif;*/
 
+/* GLOBALS */
+
 *, *::after, *::before{
     padding: 0;
     margin: 0;
@@ -18,6 +20,8 @@ body{
     justify-content: space-between;
 }
 
+/* BEGIN ASIDE */
+
 aside{
     display: none;
     height: 100%;
@@ -30,6 +34,8 @@ aside{
         width: 15rem;
     }
 }
+
+/* END GLOBALS */
 
 /* ASIDE CLOSED */
 
@@ -172,7 +178,9 @@ aside{
     gap: 10px;
 }
 
-/* NAVBAR */
+/* END ASIDE */
+
+/* BEGIN NAVBAR */
 
 nav{
     display: flex;  
@@ -218,6 +226,8 @@ nav{
     font-weight: 300;
     font-size: 10px;
 }
+
+/* END LEFT */
 
 /* CENTER */
 
@@ -282,6 +292,8 @@ nav{
     }
 }
 
+/* END CENTER */
+
 /* RIGHT */
 
 .navbar-right{
@@ -341,8 +353,7 @@ div.microphone{
 
 /* END NAVBAR */
 
-
-/* SLIDER */
+/* BEGIN SLIDER */
 
 section.slider{
     padding-top: 4.25rem;
@@ -366,7 +377,7 @@ section.slider{
 
 /* END SLIDER */
 
-/* PRINCIAPL */
+/* BEGIN PRINCIAPL AND VIDEOS */
 
 main{
     width: 100%;
@@ -400,7 +411,9 @@ section.videos{
     }
 }
 
-/* VIDEOS */
+/* END PRINCIAPL AND VIDEOS */
+
+/* BEGIN VIDEOS */
 
 .video{
     width: 100%;
@@ -455,7 +468,9 @@ section.videos{
     gap: .2rem;
 }
 
-/* SHORTS */
+/* END VIDEOS */
+
+/* BEGIN SHORTS */
 
 .shorts-title{
     display: flex;
@@ -532,6 +547,10 @@ section.shorts{
     font-size: 14px;
 }
 
+/* END SHORTS */
+
+/* BEGIN SEPARATOR */
+
 .separator{
     display: flex;
     align-items: center;
@@ -558,3 +577,5 @@ section.shorts{
     border-color: #3938387b;
     cursor: pointer;
 }
+
+/* END SEPARATOR */
