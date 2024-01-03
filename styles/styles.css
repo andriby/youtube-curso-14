@@ -20,13 +20,15 @@ body{
     justify-content: space-between;
 }
 
+/* END GLOBALS */
+
 /* BEGIN ASIDE */
 
 aside{
     display: none;
     height: 100%;
-    /* border-right: 1px solid #8a8a8a63; */
     padding-right: 0;
+    margin-top: 4rem;
 }
 
 @media only screen and(min-width:1314px){
@@ -34,8 +36,6 @@ aside{
         width: 15rem;
     }
 }
-
-/* END GLOBALS */
 
 /* ASIDE CLOSED */
 
@@ -273,6 +273,7 @@ nav{
     padding: .75rem 1rem;
     border: 1px solid #303030;
     color: #B4B4B4;
+    cursor: pointer;
 }
 
 .microphone-center{
@@ -281,8 +282,13 @@ nav{
     justify-content: center;
     padding: .5rem;
     border-radius: 50%;
-    background-color: #272727;
+    background-color: #3e3e3e;
     color: #dedede;
+}
+
+.microphone-center:hover{
+    background-color: #4e4e4ea3;
+    cursor: pointer;
 }
 
 @media only screen and (min-width:600px){
@@ -356,11 +362,13 @@ div.microphone{
 /* BEGIN SLIDER */
 
 section.slider{
-    padding-top: 4.25rem;
+    padding-top: 3.25rem;
+    padding-bottom: 1.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .95rem;
+    overflow-x: hidden;
 }
 
 .slider span{
@@ -369,10 +377,23 @@ section.slider{
     padding: .5rem;
     border-radius: 5px;
     font-size: 14px;
+    cursor: pointer;
+}
+
+span.selected{
+    background-color: #fff;
+    color: #272727;
+}
+
+.slider span:hover, div.arrow:hover{
+    background-color: #4e4e4ea3;
 }
 
 .slider div.arrow{
     color: #a2a2a2;
+    border-radius: 100%;
+    padding: 5px 9px;
+    cursor: pointer;
 }
 
 /* END SLIDER */
@@ -421,8 +442,10 @@ section.videos{
     flex-direction: column;
     gap: .33rem;
 }
+
 .thumbnail{
     position: relative;
+    cursor: pointer;
 }
 
 .thumbnail img{
