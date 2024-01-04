@@ -406,6 +406,18 @@ main{
     padding-top: 2.5rem;
 }
 
+@media only screen and (min-width:802px){
+    main{
+        width: 90%;    
+    }
+}
+
+@media only screen and (min-width:968px){
+    main{
+        width: 100%;
+    }
+}
+
 @media only screen and (min-width:1314px){
     main{
         padding-left: 22.5rem;
