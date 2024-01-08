@@ -28,7 +28,11 @@ aside{
     display: none;
     height: 100%;
     padding-right: 0;
-    margin-top: 4rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+    
+    height: 100vh;
 }
 
 @media only screen and(min-width:1314px){
@@ -38,6 +42,13 @@ aside{
 }
 
 /* ASIDE CLOSED */
+
+.aside-closed{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
 
 .aside-closed ul{
     display: flex;
@@ -189,9 +200,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     background-color: #0F0F0F;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0; 
     z-index: 9;
     width: 100%;
 }
@@ -362,7 +372,7 @@ div.microphone{
 /* BEGIN SLIDER */
 
 section.slider{
-    padding-top: 3.25rem;
+    padding-top: 1rem;
     padding-bottom: 1.75rem;
     display: flex;
     align-items: center;
@@ -403,7 +413,7 @@ span.selected{
 main{
     width: 100%;
     padding: 2rem;
-    padding-top: 2.5rem;
+    padding-top: 1rem;
 }
 
 @media only screen and (min-width:802px){
